@@ -7,7 +7,7 @@ def main() :
 
     while valConexao != 200:
         try:
-            resposta = requests.get('https://timeapi.io/api/time/current/zone?timeZone=America%2FSao_Paulo', timeout=5)
+            resposta = requests.get('https://timeapi.io/api/time/current/zone?timeZone=America%2FSao_Paulo')
             valConexao = resposta.status_code
             if valConexao == 200:
                 dia = json.loads(resposta.text)["day"]
